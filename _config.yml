@@ -1,0 +1,31 @@
+# Permalinks
+permalink:      /:year-:month-:day/:title
+
+# Setup
+title:          kykkyn2 tech blog
+paginate:       5
+baseurl:        ""
+url:            "https://kykkyn2.github.io"
+
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        :compressed
+
+# Build settings
+markdown:       kramdown
+
+# About
+author:
+  name:         kykkyn2
+  url:          http://notmong.com
+  email:        kykkyn2@gmail.com
+
+# Custom vars
+version:        0.0.1
+github:
+  repo:         https://github.com/kykkyn2
+
+# Gems
+gems:
+  - jekyll-paginate
