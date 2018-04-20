@@ -3,29 +3,30 @@ layout: default
 ---
 
 <div class="post">
-  <div class="post-info">
-    <span>Written by&nbsp;</span>{{ page.author }}
+    <div class="post-info">
+        <span>Written by&nbsp;</span>{{ page.author }}
 
-    {% if page.date %}
-      <br>
-      <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
-    {% endif %}
-  </div>
+        {% if page.date %}
+        <br>
+        <span>on&nbsp;</span>
+        <time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
+        {% endif %}
+    </div>
 
-  <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-line"></div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-line"></div>
 
-  {{ content }}
+    {{ content }}
 
 </div>
-
+<div class="fb-comments" data-href="{{site.url | append: page.url}}" data-width="100%" data-numposts="5"></div>
 <div class="pagination">
-  {% if page.next.url %}
+    {% if page.next.url %}
     <a href="{{ page.next.url | prepend: site.url }}" class="left arrow">&#8592;</a>
-  {% endif %}
-  {% if page.previous.url %}
+    {% endif %}
+    {% if page.previous.url %}
     <a href="{{ page.previous.url | prepend: site.url }}" class="right arrow">&#8594;</a>
-  {% endif %}
+    {% endif %}
 
-  <a href="#" class="top">Top</a>
+    <a href="#" class="top">Top</a>
 </div>
