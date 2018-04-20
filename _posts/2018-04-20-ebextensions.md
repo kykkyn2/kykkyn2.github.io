@@ -58,6 +58,11 @@ client_max_body_size 1024M;
     </configuration>
 </plugin>
 ```
+
+** targetPath 에 .ebextensions 로 설정한 이유는 resources 파일에서 ebextensions 을 . 으로 설정 하지 않았기 때문 입니다.
+.ebextensions 으로 디렉토리를 생성 하셨다면 위에 targetPath 는 생략 하셔도 됩니다.
+**
+
 maven 빌드 후 war 파일 생성시 아래와 같은 구조로 생성이 되어야 합니다.
 
 <pre>
@@ -68,7 +73,7 @@ maven 빌드 후 war 파일 생성시 아래와 같은 구조로 생성이 되�
 └── WEB-INF
 </pre>
 
-AWS Beanstalk 배포 후 shell 로 확인해 보면 아래와 같이 example.conf 가 포함 되어 있습니다.
+AWS Beanstalk 배포 후 /etc/nginx/conf.d/elasticbeanstalk 을 확인해 보면 아래와 같이 example.conf 가 포함 되어 있습니다.
 
 ```shell
 -rw-r--r-- 1 root root 407 Apr 19 07:00 00_application.conf
@@ -76,7 +81,6 @@ AWS Beanstalk 배포 후 shell 로 확인해 보면 아래와 같이 example.con
 -rw-r--r-- 1 root root 277 Apr 19 07:00 example.conf
 -rw-r--r-- 1 root root 216 Apr 19 07:00 healthd.conf
 ```
+이제 maven 빌드 후 war 파일을 재 배포 해도 위와 같은 설정은 계속 해서 유지 되는 것을 볼 수 있습니다.
 
-
-
-
+ebextensions 을 리서치 하다보니 Commands (ec2 인스턴스에서 구동되는 실행 명령) 사용 방법도 나오는데 한번 찾아보고 적용 해보고 싶다.
