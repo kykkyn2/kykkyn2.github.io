@@ -43,8 +43,11 @@ slack 뿐만 아니라 discord 및 hipchat 등 webhook 기능을 제공하는 Ve
     <version>1.4.0</version>
 </dependency>
 ```
+
 2. logback.xml 생성 
 ```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
 <configuration>
   <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
   <property name="LOG_FILE" value="${LOG_FILE:-${LOG_PATH:-${LOG_TEMP:-${java.io.tmpdir:-/tmp}}/}spring.miningLogs}"/>
