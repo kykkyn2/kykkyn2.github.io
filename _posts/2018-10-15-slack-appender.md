@@ -20,17 +20,22 @@ slack 뿐만 아니라 discord 및 hipchat 등 webhook 기능을 제공하는 Ve
 ## Slack Setting
 
 1. [API Slack](https://api.slack.com/apps) 가셔서 Create New App 을 합니다.
+
 2. Slack App 생성
 ![blog-1](https://user-images.githubusercontent.com/5660626/46941114-5213a300-d0a5-11e8-8d76-07136c3fe240.png)
+
 3. Incoming Webhooks 클릭
 ![blog-2](https://user-images.githubusercontent.com/5660626/46941570-6310e400-d0a6-11e8-8733-da359241f402.png)
+
 4. Activate Incoming Webhooks On 으로 켜주세요. 
 ![blog-3](https://user-images.githubusercontent.com/5660626/46941302-c9e1cd80-d0a5-11e8-9f6f-0a8177e5bb7d.png)
+
 5. Webhook URL	복사해 두세요.
 
 ## Spring boot Setting (maven)
 
 1. slack appender 추가
+
 ```xml
 <dependency>
     <groupId>com.github.maricn</groupId>
@@ -40,8 +45,6 @@ slack 뿐만 아니라 discord 및 hipchat 등 webhook 기능을 제공하는 Ve
 ```
 2. logback.xml 생성 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-
 <configuration>
   <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
   <property name="LOG_FILE" value="${LOG_FILE:-${LOG_PATH:-${LOG_TEMP:-${java.io.tmpdir:-/tmp}}/}spring.miningLogs}"/>
@@ -74,9 +77,12 @@ slack 뿐만 아니라 discord 및 hipchat 등 webhook 기능을 제공하는 Ve
 </configuration>
 ```
 3. webhookUri 에 {token} 이부분은 아까 복사 해둔 것으로 변경
+
 4. log level 을 WARN 이상(?) 으로 설정을 했다.
+
 5. warn 으로 테스트 진행
 ![blog-4](https://user-images.githubusercontent.com/5660626/46942471-5f7e5c80-d0a8-11e8-99ac-505f77de870b.png)
+
 6. slack 확인
 ![blog-5](https://user-images.githubusercontent.com/5660626/46942476-61482000-d0a8-11e8-9a7d-d84814ee9ac7.png)
 
