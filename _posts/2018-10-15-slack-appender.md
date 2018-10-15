@@ -27,7 +27,7 @@ slack 뿐만 아니라 discord 및 hipchat 등 webhook 기능을 제공하는 Ve
 3. Incoming Webhooks 클릭
 ![blog-2](https://user-images.githubusercontent.com/5660626/46941570-6310e400-d0a6-11e8-8733-da359241f402.png)
 
-4. Activate Incoming Webhooks On 으로 켜주세요. 
+4. Activate Incoming Webhooks On 으로 켜주세요.
 ![blog-3](https://user-images.githubusercontent.com/5660626/46941302-c9e1cd80-d0a5-11e8-9f6f-0a8177e5bb7d.png)
 
 5. Webhook URL	복사해 두세요.
