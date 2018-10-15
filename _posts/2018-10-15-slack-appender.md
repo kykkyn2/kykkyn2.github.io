@@ -44,7 +44,8 @@ slack 뿐만 아니라 discord 및 hipchat 등 webhook 기능을 제공하는 Ve
 </dependency>
 ```
 
-2. logback.xml 생성 
+2. logback.xml 생성
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 
@@ -79,6 +80,7 @@ slack 뿐만 아니라 discord 및 hipchat 등 webhook 기능을 제공하는 Ve
   </root>
 </configuration>
 ```
+
 3. webhookUri 에 {token} 이부분은 아까 복사 해둔 것으로 변경
 
 4. log level 을 WARN 이상(?) 으로 설정을 했다.
