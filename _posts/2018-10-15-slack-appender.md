@@ -16,7 +16,7 @@ log 를 특정 공간에 적재 해 두어야 할때는 s3에 올리기도 하�
 slack 뿐만 아니라 discord 및 hipchat 등 webhook 기능을 제공하는 Vender 제품은 다 사용 할 수 있다.
 이 글에서는 Messenger 를 사용 할 계획이다. 가장 많이 사용 하고 있는 slack 을 사용 하겠다.
 
-
+[]
 ## Slack Setting
 
 1. [API Slack](https://api.slack.com/apps) 가셔서 Create New App 을 합니다.
