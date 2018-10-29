@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Spring Boot Logback Slack Appender"
+title: "AWS Elastic Beanstalk Load Balancing And Auto Scaling"
 author: "kykkyn2"
 ---
 
